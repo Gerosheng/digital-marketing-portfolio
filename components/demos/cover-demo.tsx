@@ -20,7 +20,7 @@ export function CoverDemo() {
       dark:from-neutral-800 
       dark:via-white 
       dark:to-white">
-        Elevate your brand with <br /> <Cover>Van Bockryck's Marketing Services</Cover>
+        Klaar om gezien te worden? <br /> <Cover>Evi's Marketing Services</Cover>
       </h1>
     </div>
   );

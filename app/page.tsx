@@ -1,6 +1,6 @@
 'use client';
 
-import { AnimatedShinyTextDemo } from "@/components/demos/animated-shiny-text-demo";
+// import { AnimatedShinyTextDemo } from "@/components/demos/animated-shiny-text-demo";
 import { CoverDemo } from "@/components/demos/cover-demo";
 import { BoxReveal } from "@/components/magicui/box-reveal";
 import { PiCheckBold } from "react-icons/pi";
@@ -16,6 +16,8 @@ import BoxRevealDemo from "@/components/demos/box-reveal-demo";
 import { IconStarFilled } from "@tabler/icons-react";
 import { ShootingStarsAndStarsBackgroundDemo } from "@/components/demos/shooting-stars-demo";
 import LetsMakeThingsHappenSection from "@/components/ui/lets-make-things-happen";
+import { HeroSectionDemo } from "@/components/demos/hero-section-demo";
+import { Intro } from "@/components/intro";
 
 const services = [
   {
@@ -59,8 +61,9 @@ const services = [
 
 export default function Home() {
   return (
-    <div className="overflow-clip top-0 z-[-2] h-full w-full bg-[#fafafa] bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]">
-      <Element name="top" className="overflow-hidden rounded-[6px] top-5 sticky md:mx-auto z-50 xl:w-4/5 2xl:w-[68%] bg-white flex items-center justify-between py-6 px-4 md:px-8 mx-6">
+    
+    <div className="overflow-clip top-0 z-[-2] h-full w-full bg-[#FCF5EB] bg-[radial-gradient(100%_50%_at_50%_0%,rgba(68, 161, 110, 0.13)_0,rgba(68, 161, 110, 0)_50%,rgba(68, 161, 110, 0)_100%)]">
+      <Element name="top" className="fixed overflow-hidden top-0 left-0 rounded-[6px] md:mx-auto z-50 w-full bg-[#FCF5EB] flex items-center justify-between py-6 px-4 md:px-8 mx-6">
 
         <Link href={"/"}>
           <Image
@@ -73,83 +76,47 @@ export default function Home() {
         </Link>
 
           <div className="absolute right-1/2 translate-x-1/2 transform">
-            <div className="hidden md:flex gap-x-10 items-center text-gray-700 font-medium text-lg cursor-pointer">
-              <Link href={'/showcase'} className="hover:text-blue-500"> Showcase </Link>
+            <div className="hidden md:flex gap-x-10 items-center text-[#ba4b2f] font-medium text-lg cursor-pointer">
+              <Link href={'/showcase'} className="hover:text-[#2f9eba]"> Showcase </Link>
 
-              <ScrollLink to='services' smooth={true} className="hover:text-blue-500"> Services </ScrollLink>
-              <ScrollLink to='process' smooth={true} className="hover:text-blue-500"> Process </ScrollLink>
-              <ScrollLink to='guarentees' smooth={true} className="hover:text-blue-500"> Guarentess </ScrollLink>
+              <ScrollLink to='services' smooth={true} className="hover:text-[#2f9eba]"> Services </ScrollLink>
+              <ScrollLink to='process' smooth={true} className="hover:text-[#2f9eba]"> Process </ScrollLink>
+              <ScrollLink to='guarentees' smooth={true} className="hover:text-[#2f9eba]"> Guarentess </ScrollLink>
 
             </div>
           </div>
 
         <div className="flex items-center gap-x-4">
           <a href="tel:+32470200000" className="hidden xl:flex"> 
-            <button className="px-4 py-2 rounded-md flex items-center gap-x-3">
+            <button className="px-4 py-2 rounded-md flex items-center gap-x-3 text-[#ba4b2f]">
               +32 470 20 00 00 
             </button>
           </a>
-          <Link href={'/meeting'} className="px-6 py-3 text-lg hover:bg-[#abcbff] rounded-[6px] border-2 border-black text-white bg-[#121212] transition duration-200 hover:shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)] ">
+          <Link href={'/meeting'} className="px-6 py-3 text-lg 
+            hover:bg-[#efa593] 
+            rounded-[6px] border-2 border-black 
+            text-[#fcf5eb] bg-[#ba4b2f] transition duration-200 
+            hover:shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] 
+            dark:shadow-[1px_1px_rgba(255,255,255),
+                        2px_2px_rgba(255,255,255),
+                        3px_3px_rgba(255,255,255),
+                        4px_4px_rgba(255,255,255),
+                        5px_5px_0px_0px_rgba(255,255,255)] ">
             Book a call
           </Link>
         </div>
       </Element>
 
+
       <main className="md:pb-10">
-        <div className="md:px-0 mx-6 xl:w-4/5 2xl:w-[68%] md:mx-auto mt-14">
-          <AnimatedShinyTextDemo />
+          <h1>
+              <HeroSectionDemo/>
+          </h1>  
+
+          <Intro/>
         
-        <h1>
-          <CoverDemo />
-        </h1>
+        <div className="md:px-0 mx-6 xl:w-screen 2xl:w-4/5 md:mx-auto mt-14">
 
-        <p className="md:text-center text-xl md:text-2xl my-6 md:my-10 md:w-4/5 mx-auto text-gray-500">
-          Schedule a call with me to discuss your marketing needs and how I can help you grow your business.
-        </p>
-
-         <div
-            className="
-                 flex 
-                  md:justify-center 
-                  items-center 
-                  gap-x-4
-                   "
-          >
-            <Link
-              href="/meeting"
-              className="py-3 
-            px-10
-            md:px-16
-      md:text-xl
-      hover:bg-[#abcbff] 
-      rounded-[6px]
-      border-2 
-      border-black 
-      dark:border-white 
-       bg-[#121212] 
-       text-white 
-       transition 
-       duration-200 
-       hover:shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)] "
-            >
-              Book a Call
-            </Link>
-            <Link
-              href={"/showcase"}
-              className="
-              bg-white
-   py-3 
-   px-10
-   md:px-16
-      md:text-xl
-        border-4
-        border-black
-        rounded-[6px]
-        hover:shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)]"
-            >
-              Showcase
-            </Link>
-          </div>
           <div className=" grid grid-cols-2 md:grid-cols-4 gap-4 items-center text-left md:justify-items-center md:mx-auto mt-10 md:mt-16">
           <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
               <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
