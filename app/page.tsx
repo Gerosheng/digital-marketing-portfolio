@@ -115,81 +115,37 @@ export default function Home() {
 
           <Intro/>
         
-        <div className="md:px-0 mx-6 xl:w-screen 2xl:w-4/5 md:mx-auto mt-14">
-
-          <div className=" grid grid-cols-2 md:grid-cols-4 gap-4 items-center text-left md:justify-items-center md:mx-auto mt-10 md:mt-16">
-          <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
-              <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
-                <PiCheckBold className="text-xl text-blue-500" />
-                Design
-              </p>
-            </BoxReveal>
-            <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
-              <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
-                <PiCheckBold className="text-xl text-blue-500" />
-                Development
-              </p>
-            </BoxReveal>
-            <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
-              <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
-                <PiCheckBold className="text-xl text-blue-500" />
-                Marketing
-              </p>
-            </BoxReveal>
-            <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
-              <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
-                <PiCheckBold className="text-xl text-blue-500" />
-                Strategy
-              </p>
-            </BoxReveal>
-          </div>
-
-          <div className="md:flex items-center justify-between gap-y-4 my-10 gap-x-28 mx-auto">
-            <div className="md:w-2/5">
-              <h1 className="text-2xl font-medium text-gray-600 w-4/5">
-                Trusted by fast growing companies
-              </h1>
-
-              <div className="flex my-6 gap-x-5 w-full">
-                <div>
-                  <h1 className="text-blue-500 text-3xl md:text-5xl">
-                    <NumberTicker value={1000} /> +
-                    <p className="text-gray-500 text-sm md:text-md">Happy Clients</p>
-                  </h1>
-                </div>
-
-                <div className="w-px bg-gray-300 self-stretch"></div>
-
-                <div className="flex-1 min-w-0">
-                  <h1 className="text-blue-500 text-3xl md:text-5xl whitespace-nowrap overflow-hidden">
-                    <NumberTicker value={100} /> +
-                    <p className="text-gray-500 text-sm md:text-md">Projects Completed</p>
-                  </h1>
-                </div>
-
+          <div className="w-full bg-[#efa593] py-16">
+            <div className="mx-auto w-full max-w-screen-xl px-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-center text-left md:justify-items-center">
+                <BoxReveal boxColor={"#ba4b2f"} duration={0.5}>
+                  <p className="md:text-2xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
+                    <PiCheckBold className="text-xl text-blue-500" />
+                    Audit
+                  </p>
+                </BoxReveal>
+                <BoxReveal boxColor={"#ba4b2f"} duration={0.5}>
+                  <p className="md:text-2xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
+                    <PiCheckBold className="text-xl text-blue-500" />
+                    Design
+                  </p>
+                </BoxReveal>
+                <BoxReveal boxColor={"#ba4b2f"} duration={0.5}>
+                  <p className="md:text-2xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
+                    <PiCheckBold className="text-xl text-blue-500" />
+                    Marketing
+                  </p>
+                </BoxReveal>
+                <BoxReveal boxColor={"#ba4b2f"} duration={0.5}>
+                  <p className="md:text-2xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
+                    <PiCheckBold className="text-xl text-blue-500" />
+                    Management
+                  </p>
+                </BoxReveal>
               </div>
-
-
-            </div>
-
-              <section className="overflow-hidden mt-10 md:w-4/5">
-                <InfiniteMovingLogos
-                  speed="slow"
-                  direction="left"
-                  items={[
-                    {
-                      logo: "/logo/logo.webp",
-                      name: "logo1",
-                    },
-                    {
-                      logo: "/logo/logo.webp",
-                      name: "logo2",
-                    },
-                  ]}
-                />
-              </section>
             </div>
           </div>
+
       </main>
 
       <Element name="services">
