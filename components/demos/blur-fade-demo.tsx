@@ -6,25 +6,25 @@ const works = [
   {
     background: "bg-gray-200",
     imageUrl: "/images/revolution-motors-instagram.png",
-    title: "Revolution Motors",
+    title: "Revolution Motors1",
     link: "https://www.instagram.com/revolution.motors_/",
   },
   {
     background: "bg-gray-200",
     imageUrl: "/images/module-home-instagram.png",
-    title: "Modulehome",
+    title: "Modulehome1",
     link: "https://www.instagram.com/modulehome_/",
   },
   {
     background: "bg-gray-200",
     imageUrl: "/images/revolution-motors-instagram.png",
-    title: "Revolution Motors",
+    title: "Revolution Motors2",
     link: "https://www.instagram.com/revolution.motors_/",
   },
   {
     background: "bg-gray-200",
     imageUrl: "/images/module-home-instagram.png",
-    title: "Modulehome",
+    title: "Modulehome2",
     link: "https://www.instagram.com/modulehome_/",
   },
 
