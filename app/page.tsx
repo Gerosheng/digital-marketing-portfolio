@@ -18,19 +18,27 @@ import { ShootingStarsAndStarsBackgroundDemo } from "@/components/demos/shooting
 import LetsMakeThingsHappenSection from "@/components/ui/lets-make-things-happen";
 import { HeroSectionDemo } from "@/components/demos/hero-section-demo";
 import { Intro } from "@/components/intro";
+import { AnimatedTestimonialsDemo } from "@/components/demos/animated-testimonials-demo";
+import Footer from "@/components/footer";
 
 const services = [
   {
     icon: "/images/s_6.png",
-    title: "Web Design + Development",
+    title: "Social Media Audit",
     description:
       "Take your business to the next level with our web design and development services",
   },
   {
     icon: "/images/s_1.png",
-    title: "Search Engine Optimization",
+    title: "Planning & Strategy",
     description:
       "Get your website to the top of search engine results with our SEO services",
+  },
+  {
+    icon: "/images/s_4.png",
+    title: "Branding & Design",
+    description:
+      "With our content creation services, we help businesses drive results",
   },
   {
     icon: "/images/s_5.png",
@@ -40,22 +48,28 @@ const services = [
   },
   {
     icon: "/images/s_3.png",
-    title: "Social Media Marketing",
+    title: "Community Management",
     description:
       "Interact with your customers and increase sales with our email marketing services",
   },
   {
-    icon: "/images/s_4.png",
-    title: "Email Marketing",
-    description:
-      "With our content creation services, we help businesses drive results",
-  },
-  {
     icon: "/images/s_2.png",
-    title: "Pay-Per-Click Advertising",
+    title: "Influencer Management",
     description:
       "Don't waste money on ineffective advertising. Our PPC services help you reach your target audience",
   },
+  {
+    icon: "/images/s_2.png",
+    title: "Crisis Management & Response",
+    description:
+      "Get your business noticed with our public relations services",
+  },
+  {
+    icon: "/images/s_2.png",
+    title: "Analytics",
+    description:
+      "Get the most out of your marketing efforts with our analytics and reporting services",
+  }
 ];
 
 
@@ -67,8 +81,8 @@ export default function Home() {
 
         <Link href={"/"}>
           <Image
-                  src="/logo/logo.webp"
-                  alt="Bird Logo"
+                  src="/logo/ev-logo-dark.png"
+                  alt="Evi Van Bockryck Logo"
                   width={1000}
                   height={1000}
                   className="w-28"
@@ -79,9 +93,9 @@ export default function Home() {
             <div className="hidden md:flex gap-x-10 items-center text-[#ba4b2f] font-medium text-lg cursor-pointer">
               <Link href={'/showcase'} className="hover:text-[#2f9eba]"> Showcase </Link>
 
-              <ScrollLink to='services' smooth={true} className="hover:text-[#2f9eba]"> Services </ScrollLink>
-              <ScrollLink to='process' smooth={true} className="hover:text-[#2f9eba]"> Process </ScrollLink>
-              <ScrollLink to='guarentees' smooth={true} className="hover:text-[#2f9eba]"> Guarentess </ScrollLink>
+              <ScrollLink to='services' smooth={true} offset={-120} className="hover:text-[#2f9eba]"> Services </ScrollLink>
+              <ScrollLink to='process' smooth={true} offset={-120} className="hover:text-[#2f9eba]"> Process </ScrollLink>
+              <ScrollLink to='guarentees' smooth={true} offset={-120} className="hover:text-[#2f9eba]"> Guarentess </ScrollLink>
 
             </div>
           </div>
@@ -115,106 +129,63 @@ export default function Home() {
 
           <Intro/>
         
-        <div className="md:px-0 mx-6 xl:w-screen 2xl:w-4/5 md:mx-auto mt-14">
-
-          <div className=" grid grid-cols-2 md:grid-cols-4 gap-4 items-center text-left md:justify-items-center md:mx-auto mt-10 md:mt-16">
-          <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
-              <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
-                <PiCheckBold className="text-xl text-blue-500" />
-                Design
-              </p>
-            </BoxReveal>
-            <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
-              <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
-                <PiCheckBold className="text-xl text-blue-500" />
-                Development
-              </p>
-            </BoxReveal>
-            <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
-              <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
-                <PiCheckBold className="text-xl text-blue-500" />
-                Marketing
-              </p>
-            </BoxReveal>
-            <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
-              <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
-                <PiCheckBold className="text-xl text-blue-500" />
-                Strategy
-              </p>
-            </BoxReveal>
-          </div>
-
-          <div className="md:flex items-center justify-between gap-y-4 my-10 gap-x-28 mx-auto">
-            <div className="md:w-2/5">
-              <h1 className="text-2xl font-medium text-gray-600 w-4/5">
-                Trusted by fast growing companies
-              </h1>
-
-              <div className="flex my-6 gap-x-5 w-full">
-                <div>
-                  <h1 className="text-blue-500 text-3xl md:text-5xl">
-                    <NumberTicker value={1000} /> +
-                    <p className="text-gray-500 text-sm md:text-md">Happy Clients</p>
-                  </h1>
-                </div>
-
-                <div className="w-px bg-gray-300 self-stretch"></div>
-
-                <div className="flex-1 min-w-0">
-                  <h1 className="text-blue-500 text-3xl md:text-5xl whitespace-nowrap overflow-hidden">
-                    <NumberTicker value={100} /> +
-                    <p className="text-gray-500 text-sm md:text-md">Projects Completed</p>
-                  </h1>
-                </div>
-
+          <div className="w-full bg-[#efa593] py-16">
+            <div className="mx-auto w-full max-w-screen-xl px-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-center text-left md:justify-items-center">
+                <BoxReveal boxColor={"#ba4b2f"} duration={0.5}>
+                  <p className="md:text-3xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
+                    <PiCheckBold className="text-xl text-blue-500" />
+                    Audit
+                  </p>
+                </BoxReveal>
+                <BoxReveal boxColor={"#ba4b2f"} duration={0.5}>
+                  <p className="md:text-3xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
+                    <PiCheckBold className="text-xl text-blue-500" />
+                    Design
+                  </p>
+                </BoxReveal>
+                <BoxReveal boxColor={"#ba4b2f"} duration={0.5}>
+                  <p className="md:text-3xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
+                    <PiCheckBold className="text-xl text-blue-500" />
+                    Marketing
+                  </p>
+                </BoxReveal>
+                <BoxReveal boxColor={"#ba4b2f"} duration={0.5}>
+                  <p className="md:text-3xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
+                    <PiCheckBold className="text-xl text-blue-500" />
+                    Management
+                  </p>
+                </BoxReveal>
               </div>
-
-
-            </div>
-
-              <section className="overflow-hidden mt-10 md:w-4/5">
-                <InfiniteMovingLogos
-                  speed="slow"
-                  direction="left"
-                  items={[
-                    {
-                      logo: "/logo/logo.webp",
-                      name: "logo1",
-                    },
-                    {
-                      logo: "/logo/logo.webp",
-                      name: "logo2",
-                    },
-                  ]}
-                />
-              </section>
             </div>
           </div>
+
       </main>
 
       <Element name="services">
-        <div className="md:px-0 mx-6 xl:w-4/5 2xl:w-[68%] md:mx-auto mt-14">
+        <div className="md:px-5 mx-6 xl:w-4/5 2xl:w-[68%] md:mx-auto mt-14">
           <h1 className="text-3xl md:text-(xl md:text-center font-medium">
             <FlipTextDemo />
           </h1>
-          <p className="md:text-center py-4 md:w-1/2 mx-auto text-xl md:text-2xl text-gray-500">
-            I offer a wide range of marketing services to help you grow your business and make it stand out.
+          <p className="md:text-center py-4 md:w-1/2 mx-auto text-xl md:text-2xl text-[#ba4b2f]">
+            Ik bied een breed scala aan marketingdiensten om je bedrijf te laten groeien en eruit te laten springen.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
             {services.map((service) => (
               <div
                 key={service.title}
-                className="flex flex-col justify-between h-full space-y-4 text-center bg-gray-100 p-4 cursor-pointer hover:scale-105 transition-transform rounded-md"
+                className="flex flex-col justify-between h-full space-y-4 text-center bg-[#efa593] p-4 hover:scale-105 transition-transform rounded-3xl"
               >
                 <Image
                   src={service.icon}
                   width={10000}
                   height={10000}
-                  className="object-contain bg-gray-100 p-4 w-full h-40 rounded-md"
+                  className="object-contain bg-[#efa593] p-4 w-full h-40 rounded-md"
                   alt="image"
                 />
-                <h1 className="text-xl font-medium">{service.title}</h1>
-                <p className="text-gray-500">{service.description}</p>
+                <h1 className="text-[#ba4b2f] text-xl font-medium"><span className="w-fit rounded-lg p-1.5 bg-amber-50">{service.title}</span></h1>
+                <p className="text-m text-[#fcf5eb]">{service.description}</p>
               </div>
             ))}
           </div>
@@ -226,10 +197,10 @@ export default function Home() {
       </section>
 
       <Element name="process">
-        <main className="md:px-0 mx-6 md:mx-auto">
-        <h1 className="text-3xl md:text-5xl md:text-center font-medium flex items-center gap-x-2 mx-auto justify-center">
-              The{" "}
-              <span className="text-blue-500 flex gap-x-1 items-center">
+        <main className="bg-[#efa593] md:px-0  md:mx-auto pt-15">
+        <h1 className="text-3xl text-[#fcf5eb] md:text-5xl md:text-center font-medium flex items-center gap-x-2 mx-auto justify-center">
+              Het{" "}
+              <span className="text-[#ba4b2f] flex gap-x-1 items-center">
                 {" "}
                 <Image
                   src={"/icons/squiggle.svg"}
@@ -249,8 +220,8 @@ export default function Home() {
               </span>{" "}
               Process
           </h1>
-          <p className="md:text-center py-4 md:w-1/2 mx-auto text-xl md:text-2xl text-gray-500">
-            All of my services are designed to help your business stand out 
+          <p className="text-center py-4 md:w-1/2 mx-auto text-xl md:text-2xl text-[#fcf5eb]">
+          Al mijn diensten zijn erop gericht om jouw bedrijf te laten opvallen.
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center w-full md:w-1/2 mx-auto">
@@ -265,20 +236,19 @@ export default function Home() {
       </Element>
 
       <section>
-        <main className="md:flex items-center justify-center space-y-6 md:space-y-0 md:gap-x-20 xl:w-4/5 2xl:w-[68%] mx-auto px-6 md:px-0">
-          <Image
-            src={"/logo/logo.webp"}
+        <main className="md:flex items-center justify-center space-y-6 md:space-y-0 md:gap-x-20 xl:w-4/5 2xl:w-[68%] mx-auto px-6 md:px-0 my-10">
+        <AnimatedTestimonialsDemo />
+
+          {/* <Image
+            src={"/images/carlo.jpeg"}
             width={10000}
             height={10000}
             className=" md:w-1/3 rounded-md"
             alt="image"
           />
           <div className="flex flex-col gap-y-5 md:w-1/2">
-            <h1 className="text-lg md:text-2xl ">
-              &quot;We&apos;ve been working with Evi for over 2 years and
-              she&apos;s been amazing to work with. She&apos;s helped us
-              grow our business and we couldn&apos;t be happier with the
-              results. &quot;
+            <h1 className="text-[#ba4b2f] text-lg md:text-2xl ">
+              &quot;We werken al meer dan 2 jaar samen met Evi en het is een geweldige samenwerking. Ze heeft ons geholpen om ons bedrijf te laten groeien en we zijn ontzettend blij met de resultaten.&quot;
             </h1>
             <div className="flex items-center gap-x-1">
               <IconStarFilled className="text-4xl text-yellow-500" />
@@ -288,12 +258,13 @@ export default function Home() {
               <IconStarFilled className="text-4xl text-yellow-500" />
             </div>
 
-            <span className="text-xl font-medium">
+            <span className="text-[#ba4b2f] text-xl font-medium">
               Carlo, Mespreuve <br />
               CEO, Revolution Motors
             </span>
-          </div>
+          </div> */}
         </main>
+
       </section>
 
       <Element name="guarentees">
@@ -305,31 +276,8 @@ export default function Home() {
       
       </section>
       
-      <footer className="bg-[#fafafa] py-10  px-6 md:px-0 md:mx-auto border-t">
-        <div className="flex flex-col  justify-between gap-y-3 xl:w-4/5 2xl:w-[68%] mx-auto">
-          <h1 className="text-3xl md:text-5xl font-medium ">
-            <Image
-              src={"/logo/logo.webp"}
-              width={10000}
-              height={10000}
-              className="w-40"
-              alt="image"
-            />{" "}
-          </h1>
-          <p className="text-left  text-xl  text-gray-500">519-200-5000</p>
-          <p className="text-left  text-xl  text-gray-500">
-            admin@birdsoftware.ca
-          </p>
-        </div>
+    <Footer className="bg-[#efa593]"/>
 
-        <div className="flex md:justify-center gap-x-4 mt-10">
-          © 2025 Bird. All Rights Reserved.
-          <Link href="/" className="text-blue-500">
-            Privacy Policy
-          </Link>
-        </div>
-      </footer>
-      
     </div> 
   );
 }

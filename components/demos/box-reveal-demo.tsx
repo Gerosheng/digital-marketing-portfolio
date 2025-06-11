@@ -5,37 +5,37 @@ import Link from "next/link";
 
 const BoxRevealDemo = () => {
   return (
-    <div className="h-full w-full items-center justify-center ml-10 overflow-hidden pt-8 space-y-2">
-      <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
+    <div className="h-full w-full items-center justify-center ml-10 overflow-hidden pt-8 space-y-2 text-[#fcf5eb]">
+      <BoxReveal boxColor={"#ba4b2f"} duration={0.5}>
         
         <p className="text-3xl font-semibold">1. Connect</p>
       </BoxReveal>
 
-      <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
-        <h2 className="my-2 text-lg text-gray-500">
-          Connect with me via
-          <Link href={"/meeting"} className="text-[#3b82f6]">
+      <BoxReveal boxColor={"#ba4b2f"} duration={0.5}>
+        <h2 className="my-2 text-lg text-[#fcf5eb]">
+        Neem contact met mij op via een 
+          <Link href={"/meeting"} className="text-[#ba4b2f]">
             {" "}
             meeting{" "}
           </Link>
         </h2>
       </BoxReveal>
-      <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
-        <p className="text-3xl font-semibold">2. Collaborate</p>
+      <BoxReveal boxColor={"#ba4b2f"} duration={0.5}>
+        <p className="text-3xl font-semibold">2. Samenwerken</p>
       </BoxReveal>
 
-      <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
-        <h2 className="my-2 text-lg text-gray-500">
-          Outline the scope of the project
+      <BoxReveal boxColor={"#ba4b2f"} duration={0.5}>
+        <h2 className="my-2 text-lg text-[#fcf5eb]">
+        Bepaal samen de omvang van het project
         </h2>
       </BoxReveal>
 
-      <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
-        <p className="text-3xl font-semibold">3. Create</p>
+      <BoxReveal boxColor={"#ba4b2f"} duration={0.5}>
+        <p className="text-3xl font-semibold">3. Creëren</p>
       </BoxReveal>
 
-      <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
-        <h2 className="my-2 text-lg text-gray-500">Leave the rest to me</h2>
+      <BoxReveal boxColor={"#ba4b2f"} duration={0.5}>
+        <h2 className="my-2 text-lg text-[#fcf5eb]">Laat de uitvoering aan mij over</h2>
       </BoxReveal>
     </div>
   );
