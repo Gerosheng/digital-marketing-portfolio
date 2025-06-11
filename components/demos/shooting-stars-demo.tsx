@@ -58,7 +58,7 @@ const features = [
 
 export function ShootingStarsAndStarsBackgroundDemo() {
   return (
-    <div className="mt-20 py-10 md:py-20 rounded-[40px] bg-neutral-900 flex flex-col items-center justify-center relative w-full px-6 md:px-0">
+    <div className="mt-20 py-10 md:py-20 rounded-[40px] bg-[#ba4b2f] flex flex-col items-center justify-center relative w-full px-6 md:px-0">
       <h2 className="relative flex-col  z-10 text-3xl md:text-5xl md:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-400 via-white to-white flex items-center gap-2 ">
         Our guarantees to you.
         <p className="md:text-center   mx-auto  text-xl md:text-2xl text-gray-200">
@@ -72,14 +72,14 @@ export function ShootingStarsAndStarsBackgroundDemo() {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="flex flex-col   p-10 bg-neutral-800 rounded-xl cursor-pointer"
+            className="flex flex-col   p-10 bg-[#FCF5EB] rounded-xl cursor-pointer"
           >
             <button
               className="
                      w-16 p-4 
                      animate-shine flex items-center justify-center rounded-md  bg-gradient-to-br  
                         from-neutral-700 to-neutral-800 
-                    font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+                    font-medium text-[#ba4b2f] transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
             >
               <Image
                 src={feature.icon}
@@ -90,16 +90,15 @@ export function ShootingStarsAndStarsBackgroundDemo() {
               />
             </button>
 
-            <h3 className="text-xl font-bold mt-4 text-white">
+            <h3 className="text-xl font-bold mt-4 text-[#ba4b2f]">
               {feature.title}
             </h3>
-            <p className=" text-gray-200">{feature.description}</p>
+            <p className=" text-[#ba4b2f]">{feature.description}</p>
           </div>
         ))}
       </div>
 
-      <ShootingStars />
-      <StarsBackground />
+
     </div>
   );
 }
