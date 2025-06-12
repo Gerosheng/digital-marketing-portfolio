@@ -1,19 +1,15 @@
 'use client';
 
 // import { AnimatedShinyTextDemo } from "@/components/demos/animated-shiny-text-demo";
-import { CoverDemo } from "@/components/demos/cover-demo";
 import { BoxReveal } from "@/components/magicui/box-reveal";
 import { PiCheckBold } from "react-icons/pi";
 import Image from "next/image";
 import Link from "next/link";
 import { Link as ScrollLink, Element } from "react-scroll";
-import { NumberTicker } from "@/components/magicui/number-ticker";
-import { InfiniteMovingLogos } from "@/components/ui/infinite-moving-logos";
 import { FlipTextDemo } from "@/components/demos/flip-text-demo";
 import { ScrollBasedVelocityDemo } from "@/components/demos/scroll-based-velocity-demo";
 import { AnimatedBeamMultipleOutputDemo } from "@/components/demos/animated-beam-mulitple-demo";
 import BoxRevealDemo from "@/components/demos/box-reveal-demo";
-import { IconStarFilled } from "@tabler/icons-react";
 import { ShootingStarsAndStarsBackgroundDemo } from "@/components/demos/shooting-stars-demo";
 import LetsMakeThingsHappenSection from "@/components/ui/lets-make-things-happen";
 import { HeroSectionDemo } from "@/components/demos/hero-section-demo";
